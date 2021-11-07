@@ -1,0 +1,118 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'alva';
+    src: url(assets/fonts/d2c8a5b6502c5538d2549b7f734e0a65.woff2) format('woff2'),
+         url(assets/fonts/65c68b7e105da627426f7a2ad817ed6b.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@media (max-width: 500px) {
+    #circularcursor {
+      display: none;
+    }
+  }
+#circularcursor {
+    background-color: transparent;
+    border:1.5px solid white;    
+    height:20px;
+    width:20px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    position: absolute;
+    z-index: 500;
+  }
+html,
+body
+{
+    height: 100vh;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+    overflow-y: hidden;
+    cursor: none;
+}
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    pointer-events: none;
+    transition: opacity 3s;
+}
+.title{
+    color: white;
+    font-family: 'alva';
+    text-align: center;
+    font-size: 5rem;
+}
+.content{
+    color: rgb(221, 221, 221);
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center; 
+}
+.loadingBarBG{
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    height: 3px;
+    background: white;
+    opacity: .2;
+}
+.loadingBar{
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform: scaleX(.0);
+    transition: transform 0.5s;
+}
+.loadingBarBG.fade{
+    animation: fadeAnim 1s forwards 0s;
+}
+.loadingBar.fade{
+    animation: fadeAnim 1s forwards 0s;
+}
+.fade{
+    animation: fadeAnim 3s forwards 3s;
+    
+}
+@keyframes fadeAnim {
+    100% {
+        opacity: 0;
+    }
+}
+a{
+    color: rgb(180, 180, 180);
+    font-size: 1em;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    text-shadow: 1px 1px 5px black;
+    z-index: 1;
+    pointer-events: none;
+    text-align: center;
+    position: absolute;
+    pointer-events:all;
+    bottom: 5%;
+    right: 5%;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color  ease 1s;
+}
+a:hover{
+    color: rgb(255, 255, 255);
+
+}
+
+/*# sourceMappingURL=main.css.map*/
